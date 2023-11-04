@@ -25,14 +25,16 @@ for (int battleNumber = 0; battleNumber < monsterParties.Count; battleNumber++)
     Battle battle = new Battle(heroes, monsters);
     battle.Run();
 
-    if (heroes.Characters.Count == 0) break;
+    if (heroes.Characters.Count == 0) break;   
 }
 
+Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("=============== GAME OVER! ===============");
 if (heroes.Characters.Count > 0) 
     Console.WriteLine("You have defeated the Uncoded One's forces! You have won the battle!");
 else 
     Console.WriteLine("You have been defeated. The Uncoded One has won.");
+Console.ForegroundColor = ConsoleColor.Gray;
 
 Party CreateMonsterParty1(IPlayer controllingPlayer)
 {

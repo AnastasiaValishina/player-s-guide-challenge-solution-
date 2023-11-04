@@ -20,6 +20,11 @@
 
         if (!_target.IsAlive())
         {
+            if (_target.Gear != null) 
+            {
+                battle.GetPartyFor(character).UnequippedGear.Add(_target.Gear);
+                Console.WriteLine($"Your party acquired {_target.Gear.Name}");
+            }
             battle.GetPartyFor(_target).Characters.Remove(_target);
             Console.WriteLine($"{_target.Name} was defeated!");
         }

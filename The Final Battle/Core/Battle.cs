@@ -26,6 +26,10 @@
                 if (IsOver()) break;
             }           
         }
+        if (_heroes.Characters.Count > 0)
+        {
+            LootInventory();
+        }
     }
 
     public Party GetEnemyPartyFor(Character character)
@@ -36,6 +40,28 @@
     public Party GetPartyFor(Character character)
     {
         return _heroes.Characters.Contains(character) ? _heroes : _monsters;
+    }
+
+    private void LootInventory()
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        if (_monsters.Items.Count > 0)
+        {
+            foreach (var item in _monsters.Items)
+            {
+                _heroes.Items.Add(item);
+                Console.WriteLine($"Your party acquired {item.Name}");
+            }
+        }
+        if (_monsters.UnequippedGear.Count > 0)
+        {
+            foreach (var gear in _monsters.UnequippedGear)
+            {
+                _heroes.UnequippedGear.Add(gear);
+                Console.WriteLine($"Your party acquired {gear.Name}");
+            }
+        }
+        Console.ForegroundColor = ConsoleColor.Gray;
     }
 
     private void ShowBattleInfo()
