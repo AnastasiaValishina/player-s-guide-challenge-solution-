@@ -12,12 +12,19 @@ public abstract class Character
     }
 
     public int MaxHP { get; }
+
+    public IGear? Gear { get; private set; }
+
     public Character(int hp)
     {
         MaxHP = hp;
         HP = hp;
     }
 
+    public void EquipGear(IGear? gear)
+    {
+        Gear = gear;
+    }
     public bool IsAlive()
     {
         return _hp > 0;

@@ -1,5 +1,4 @@
-﻿
-public class BoneCrunch : IAttack
+﻿public class BoneCrunch : IAttack
 {
     private static readonly Random _random = new Random();
     public string Name => "BONE CRUNCH";

@@ -15,7 +15,7 @@
         {
             foreach (Party party in new[] { _heroes, _monsters })
             {
-                foreach(Character character in party.Characters)
+                foreach (Character character in party.Characters)
                 {
                     ShowBattleInfo();
                     Console.WriteLine($"It is {character.Name}'s turn...");
@@ -41,8 +41,7 @@
     private void ShowBattleInfo()
     {
         Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine();
-        Console.WriteLine("New Round!");
+        Console.WriteLine();        
         foreach (Character hero in _heroes.Characters)
         {
             Console.WriteLine($"{hero.Name} ({hero.HP}/{hero.MaxHP})");

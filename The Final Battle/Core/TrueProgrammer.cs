@@ -9,6 +9,4 @@ public class TrueProgrammer : Character
     }
 
     public override IAttack StandardAttack { get; } = new Punch();
-
-
 }
