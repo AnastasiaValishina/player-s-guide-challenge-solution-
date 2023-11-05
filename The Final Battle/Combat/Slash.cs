@@ -5,6 +5,6 @@ public class Slash : IAttack
 
     public AttackData Create()
     {
-        return new AttackData(2, 1);
+        return new AttackData(2, 1, Damage.Normal);
     }
 }

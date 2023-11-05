@@ -7,10 +7,9 @@ Console.WriteLine();
 
 Party heroes = new Party(player1);
 
-heroes.Characters.Add(new TrueProgrammer(playerName));
 heroes.Characters.Add(new VinFletcher());
+heroes.Characters.Add(new TrueProgrammer(playerName));
 
-heroes.Items.Add(new HealthPotion());
 heroes.Items.Add(new HealthPotion());
 heroes.Items.Add(new HealthPotion());
 

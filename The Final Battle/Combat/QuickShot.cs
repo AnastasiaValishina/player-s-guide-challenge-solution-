@@ -5,6 +5,6 @@ public class QuickShot : IAttack
 
     public AttackData Create()
     {
-        return new AttackData(3, 0.5f);
+        return new AttackData(3, 0.5f, Damage.Normal);
     }
 }

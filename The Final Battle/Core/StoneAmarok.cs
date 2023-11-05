@@ -17,7 +17,7 @@ public class Bite : IAttack
 
     public AttackData Create()
     {
-        return new AttackData(1, 1);
+        return new AttackData(1, 1, Damage.Normal);
     }
 }
 
@@ -27,9 +27,9 @@ public class StoneArmor : IAttackModifier
 
     public AttackData Modify(AttackData data)
     {
-        Console.WriteLine($"{Name} reduced the attack by 1 point.");
+        if (data.Damage == 0) return data;
 
-        int damage = data.Damage - 1;
-        return new AttackData(damage, data.SuccessProbability);
+        Console.WriteLine($"{Name} reduced the attack by 1 point.");
+        return data with { Damage = data.Damage - 1 };
     }
 }

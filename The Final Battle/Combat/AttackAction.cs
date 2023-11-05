@@ -42,4 +42,10 @@
         }
     }
 }
-public record AttackData(int Damage, float SuccessProbability);
+public record AttackData(int Damage, float SuccessProbability, Damage damageType);
+
+public enum Damage
+{
+    Normal,
+    Decoding
+}
