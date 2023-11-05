@@ -5,6 +5,6 @@ public class Stab : IAttack
 
     public AttackData Create()
     {
-        return new AttackData(1);
+        return new AttackData(1, 1);
     }
 }

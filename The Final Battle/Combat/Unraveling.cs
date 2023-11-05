@@ -5,6 +5,6 @@
 
     public AttackData Create()
     {
-        return new AttackData(_random.Next(3));
+        return new AttackData(_random.Next(3), 1);
     }
 }

@@ -13,7 +13,7 @@ public abstract class Character
 
     public int MaxHP { get; }
 
-    public IGear? Gear { get; private set; }
+    public IGear? Gear { get; protected set; }
 
     public Character(int hp)
     {

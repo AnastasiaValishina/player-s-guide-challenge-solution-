@@ -6,9 +6,9 @@ IPlayer player2 = CreatePlayer("Select second player: 1 - human, 0 - computer. "
 Console.WriteLine();
 
 Party heroes = new Party(player1);
-TrueProgrammer trueProgrammer = new TrueProgrammer(playerName);
-trueProgrammer.EquipGear(new Sword());
-heroes.Characters.Add(trueProgrammer);
+
+heroes.Characters.Add(new TrueProgrammer(playerName));
+heroes.Characters.Add(new VinFletcher());
 
 heroes.Items.Add(new HealthPotion());
 heroes.Items.Add(new HealthPotion());

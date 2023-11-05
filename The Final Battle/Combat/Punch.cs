@@ -5,6 +5,6 @@ public class Punch : IAttack
 
     public AttackData Create()
     {
-        return new AttackData(1);
+        return new AttackData(1, 1);
     }
 }
