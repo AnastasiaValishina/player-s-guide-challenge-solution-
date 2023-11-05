@@ -28,3 +28,20 @@ public class ObjectSight : IAttackModifier
         return data;
     }
 }
+public class Sword : IGear
+{
+    public string Name => "SWORD";
+
+    public IAttack Attack => new Slash();
+}
+
+public class Slash : IAttack
+{
+    public string Name => "SLASH";
+
+    public AttackData Create()
+    {
+        return new AttackData(2, 1, Damage.Normal);
+    }
+}
+
