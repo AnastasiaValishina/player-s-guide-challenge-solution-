@@ -14,7 +14,7 @@ heroes.Items.Add(new HealthPotion());
 heroes.Items.Add(new HealthPotion());
 heroes.Items.Add(new HealthPotion());
 
-List<Party> monsterParties = new List<Party> {CreateMonsterParty1(player2), CreateMonsterParty2(player2), CreateMonsterParty3(player2)};
+List<Party> monsterParties = new List<Party> {CreateMonsterParty1(player2), CreateMonsterParty2(player2), CreateMonsterParty3(player2), CreateMonsterParty4(player2)};
 
 for (int battleNumber = 0; battleNumber < monsterParties.Count; battleNumber++)
 {
@@ -56,8 +56,16 @@ Party CreateMonsterParty2(IPlayer controllingPlayer)
     party.UnequippedGear.Add(new Dagger());
     return party;
 }
-
 Party CreateMonsterParty3(IPlayer controllingPlayer)
+{
+    Party party = new Party(controllingPlayer);
+    party.Characters.Add(new StoneAmarok());
+    party.Characters.Add(new StoneAmarok());
+    party.Items.Add(new HealthPotion());
+    return party;
+}
+
+Party CreateMonsterParty4(IPlayer controllingPlayer)
 {
     Party party = new Party(controllingPlayer);
     party.Characters.Add(new TheUncodedOne());
